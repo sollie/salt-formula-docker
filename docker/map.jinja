@@ -13,7 +13,7 @@
         'service': 'docker',
     },
     'Ubuntu': {
-        'pkgs': ['docker-engine', 'python-docker'],
+        'pkgs': ['docker-ce', 'python-docker'],
         'service': 'docker',
     },
 }, grain='os', merge=salt['pillar.get']('docker:host')) %}
