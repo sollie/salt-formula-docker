@@ -79,13 +79,13 @@ include:
   {%- endif %}
   {%- if volumes %}
     - volumes:
-    {%- for volume in volumes.iterkeys() %}
+    {%- for volume in volumes.keys() %}
       - {{volume}}
     {%- endfor %}
   {%- endif %}
   {%- if binds %}
     - binds:
-    {%- for bind in binds.iterkeys() %}
+    {%- for bind in binds.keys() %}
       - {{ bind }}
     {%- endfor %}
   {%- endif %}
