@@ -14,14 +14,14 @@
 {%- endif -%}
 
 {
-{%- for k, v in host.get('options', {}).items() -%}
+{%- for k, v in host.get('options', {}).iteritems() -%}
 
   {%- if v is string %}
     "{{ k }}": "{{ v }}"{%- if not loop.last %},{% endif %}
 
   {%- elif v is mapping %}
     "{{ k }}": {
-      {%- for ki, kv in v.items() %}
+      {%- for ki, kv in v.iteritems() %}
       "{{ ki }}": "{{ kv }}"{%- if not loop.last %},{% endif %}
       {%- endfor %}
     }{%- if not loop.last %},{% endif %}
